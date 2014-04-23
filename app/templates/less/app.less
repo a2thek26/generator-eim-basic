@@ -1,0 +1,14 @@
+/**
+ * ---------------------------------
+ * <%= siteName %>
+ * Pulls everything in
+ * ---------------------------------
+ */
+
+<% if (loadBootstrap) { %>@import "../vendor/bootstrap/less/bootstrap.less";<% } %>
+<% if (!loadBootstrap) { %>@import "../vendor/semantic-grid/stylesheets/less/grid.less";<% } %>
+@import "../vendor/font-awesome/less/font-awesome.less";
+@import "_variables.less";
+@import "_helpers.less";
+@import "_template.less";
+@import "_ui.less";

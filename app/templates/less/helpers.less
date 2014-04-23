@@ -1,0 +1,58 @@
+/**
+ * ---------------------------------
+ * FRAMING
+ * Stuff to help with structure
+ * ---------------------------------
+ */
+.padding-sides(@padding:20px) { padding-left:@padding; padding-right:@padding; }
+.padding-caps(@padding:20px) { padding-top:@padding; padding-bottom:@padding; }
+.margin-sides(@margin:20px) { margin-left:@margin; margin-right:(@margin); }
+.margin-caps(@margin:20px) { margin-top:@margin; margin-bottom:(@margin); }
+.border-sides(@border: 1px solid #000) { border-left:@border; border-right:@border; }
+.border-caps(@border: 1px solid #000) { border-top:@border; border-bottom:@border; }
+
+/**
+ * ---------------------------------
+ * LIST
+ * Stuff for lists
+ * ---------------------------------
+ */
+.blank-list() { list-style:none; margin:0; padding:0; }
+.blank-list-inline() { .blank-list();
+  > li { display:inline; float:left; margin:0; padding:0; }
+}
+
+/**
+ * ---------------------------------
+ * FONT SIZES
+ * This will create classes .f10 - .f50
+ * ---------------------------------
+ */
+@min: 10;
+@max: 50;
+
+.f (@index) when (@index >= @min) {
+  .f@{index} {
+    font-size: ~"@{index}px";
+  }
+  .f(@index - 1);
+}
+
+.f (@min) {}
+.f (@max);
+
+/**
+ * ---------------------------------
+ * TRANSLUCENCY
+ * Make backgrounds and borders transparent
+ * ---------------------------------
+ */
+#translucent {
+  .background(@color: @white, @alpha: 1) {
+    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+  }
+  .border(@color: @white, @alpha: 1) {
+    border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+    .background-clip(padding-box);
+  }
+}

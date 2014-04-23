@@ -1,0 +1,8 @@
+/node_modules
+*.log
+*.submlime-project
+*.submlime-workspace
+
+/src/vendor
+/js
+/css

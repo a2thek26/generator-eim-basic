@@ -1,0 +1,14 @@
+{
+  "name": "<%= _.slugify(siteName) %>",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery"       : ">=1.8.0 <2.0.0",
+    "modernizr"    : "~2.5.3",
+    "font-awesome" : "latest",
+    <% if(loadBootstrap) { %>
+    "bootstrap"    : "latest"
+    <% } else { %>
+    "semantic-grid": "latest"
+    <% } %>
+  }
+}

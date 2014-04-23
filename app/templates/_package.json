@@ -1,0 +1,20 @@
+{
+  "name": "<%= _.slugify(siteName) %>",
+  "private": true,
+  "devDependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-less": "~0.6.2",
+    "grunt-bower-task": "latest",
+    "grunt-bowercopy": "~1.0.0"
+  },
+  "author": "Adam Kelsven <adam.kelsven@eimchicago.com>",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
