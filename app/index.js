@@ -37,23 +37,16 @@ EimBasicGenerator.prototype.askFor = function askFor() {
     },
     {
       type    : 'input',
-      name    : 'jsDirectory',
-      message : 'Where do you want the compiled js to live?',
-      default : 'js'
-    },
-    {
-      type    : 'input',
-      name    : 'cssDirectory',
-      message : 'Where do you want the compiled css to live?',
-      default : 'css'
+      name    : 'assetsDirectory',
+      message : 'Where should we complile your assets (js/css)?',
+      default : 'assets'
     }
   ];
 
   this.prompt(prompts, function (props) {
-    this.siteName      = props.siteName;
-    this.loadBootstrap = props.loadBootstrap;
-    this.jsDirectory   = checkForSlash(props.jsDirectory);
-    this.cssDirectory  = checkForSlash(props.cssDirectory);
+    this.siteName        = props.siteName;
+    this.loadBootstrap   = props.loadBootstrap;
+    this.assetsDirectory = checkForSlash(props.assetsDirectory);
 
     cb();
   }.bind(this));
@@ -74,9 +67,10 @@ EimBasicGenerator.prototype.app = function app() {
   this.mkdir('src/js');
   this.mkdir('src/less');
   this.mkdir('src/vendor');
-  this.mkdir(this.jsDirectory);
-  this.mkdir(this.cssDirectory);
-  this.mkdir('fonts');
+  this.mkdir(this.assetsDirectory);
+  this.mkdir(this.assetsDirectory + '/js');
+  this.mkdir(this.assetsDirectory + '/css');
+  this.mkdir(this.assetsDirectory + '/fonts');
 
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');

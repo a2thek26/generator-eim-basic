@@ -4,5 +4,5 @@
 *.submlime-workspace
 
 /src/vendor
-/js
-/css
+/<%= assetsDirectory %>/js
+/<%= assetsDirectory %>/css

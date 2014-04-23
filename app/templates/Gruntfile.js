@@ -66,8 +66,8 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= jsDirectory %>/modernizr.js': ['<%= jsDirectory %>/modernizr.js'],
-          '<%= jsDirectory %>/app.js': ['<%= jsDirectory %>/app.js']
+          '<%= assetsDirectory %>/js/modernizr.js': ['<%= assetsDirectory %>/js/modernizr.js'],
+          '<%= assetsDirectory %>/js/app.js': ['<%= assetsDirectory %>/js/app.js']
         } 
       }
     },
@@ -77,7 +77,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "<%= cssDirectory %>/app.css": [ "src/less/app.less"],
+          "<%= assetsDirectory %>/css/app.css": [ "src/less/app.less"],
         }
       }
     },
