@@ -1,4 +1,4 @@
-# generator-eim-basic [![Build Status](https://secure.travis-ci.org/a2thek26/generator-eim-basic.png?branch=master)](https://travis-ci.org/a2thek26/generator-eim-basic)
+# generator-eim-basic 
 
 A generator for [Yeoman](http://yeoman.io).
 
