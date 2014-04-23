@@ -57,6 +57,7 @@ module.exports = function(grunt) {
             'src/vendor/bootstrap/js/typeahead.js',
             'src/vendor/bootstrap/js/affix.js',
             <% } %>
+            'src/js/app.js'
           ]
         }
 
