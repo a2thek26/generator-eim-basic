@@ -1,5 +1,5 @@
 {
-  "name": "<%= _.slugify(siteName) %>",
+  "name": "<%= _.slugify(projectName) %>",
   "private": true,
   "devDependencies": {
     "bower": "latest",

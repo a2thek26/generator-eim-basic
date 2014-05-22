@@ -1,6 +1,6 @@
 /**
  * ---------------------------------
- * <%= siteName.toUpperCase() %>
+ * <%= projectName.toUpperCase() %>
  * ---------------------------------
  */
 (function(window, document, undefined) {

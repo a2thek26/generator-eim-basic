@@ -1,8 +1,7 @@
 'use strict';
-var util = require('util');
-var path = require('path');
+var util   = require('util');
+var path   = require('path');
 var yeoman = require('yeoman-generator');
-
 
 var EimBasicGenerator = module.exports = function EimBasicGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -25,9 +24,9 @@ EimBasicGenerator.prototype.askFor = function askFor() {
   var prompts = [
     {
       type    : 'input',
-      name    : 'siteName',
-      message : 'What do you want to call the site?',
-      default : 'MySite'
+      name    : 'projectName',
+      message : 'What do you want to call the project?',
+      default : 'MyProject'
     },
     {
       type    : 'confirm',
@@ -44,7 +43,7 @@ EimBasicGenerator.prototype.askFor = function askFor() {
   ];
 
   this.prompt(prompts, function (props) {
-    this.siteName        = props.siteName;
+    this.projectName     = props.projectName;
     this.loadBootstrap   = props.loadBootstrap;
     this.assetsDirectory = checkForSlash(props.assetsDirectory);
 

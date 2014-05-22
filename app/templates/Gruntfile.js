@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     bowercopy: {
       fonts: {
         options: {
-          destPrefix: 'fonts'
+          destPrefix: '<%= assetsDirectory %>/fonts'
         },
         files: { 
           'fontawesome-webfont.eot'  : 'src/vendor/font-awesome/fonts/fontawesome-webfont.eot',
@@ -38,9 +38,11 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          '<%= jsDirectory %>/modernizr.js': ['src/vendor/modernizr/modernizr.js'],
+          '<%= assetsDirectory %>/js/modernizr.js': ['src/vendor/modernizr/modernizr.js'],
 
-          '<%= jsDirectory %>/app.js': [
+          '<%= assetsDirectory %>/js/respond.js': ['src/vendor/respond/dest/respond.src.js'],
+
+          '<%= assetsDirectory %>/js/app.js': [
             'src/vendor/jquery/dist/jquery.js',
             <% if(loadBootstrap) { %>
             'src/vendor/bootstrap/js/transition.js',
@@ -67,6 +69,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           '<%= assetsDirectory %>/js/modernizr.js': ['<%= assetsDirectory %>/js/modernizr.js'],
+          '<%= assetsDirectory %>/js/respond.js': ['<%= assetsDirectory %>/js/respond.js'],
           '<%= assetsDirectory %>/js/app.js': ['<%= assetsDirectory %>/js/app.js']
         } 
       }

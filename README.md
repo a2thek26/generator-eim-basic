@@ -5,6 +5,43 @@ A generator for [Yeoman](http://yeoman.io).
 
 ## Getting Started
 
+This is a super basic setup that creates the files and directories to get you started.
+
+It will prompt you a few times:
+
+1. What do you want to call the project? (MySite)
+2. Should we load Bootstrap? (Y/n) *
+3. Where should we complile your assets like js and css? (assets)
+
+*`No` will load [Semantic Grid](http://semantic.gs) (small, simple responsive library)
+
+Upon completion you should be set up with the following files and folder structure:
+
+```
+assets/
+|-- js/
+|-- css/
+|-- fonts/
+.bowerrc
+.gitignore
+bower.json
+Gruntfile.js
+node_modules/
+|-- ...
+package.js
+src/
+|-- js/
+|--|-- app.js
+|-- less/
+|--|-- _helpers.less
+|--|-- _template.less
+|--|-- _ui.less
+|--|-- _variables.less
+|--|-- app.less
+|-- vendor/
+|--|-- ...
+```
+
 ### What is Yeoman?
 
 Trick question. It's not a thing. It's this guy:
